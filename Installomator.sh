@@ -9317,22 +9317,20 @@ rstudio)
 rustdesk)
     name="RustDesk"
     type="dmg"
-    # Wir holen erst die Version, um daraus die URLs zu bauen
-    appNewVersion=$(curl -sfL "https://api.github.com" | grep "tag_name" | cut -d '"' -f 4 | tr -d 'v')
+    appNewVersion="1.4.6"
     
-    # Architektur-Prüfung und direkter URL-Bau (GitHub URLs sind bei RustDesk konsistent)
-    if [[ $(arch) == "arm64" ]]; then
-        # Apple Silicon
-        downloadURL="https://github.com{appNewVersion}/rustdesk-${appNewVersion}-aarch64.dmg"
+    if [[ "$(arch)" == "arm64" ]]; then
+        # Apple Silicon (M1/M2/M3/M4)
+        downloadURL="https://github.com/rustdesk/rustdesk/releases/download/1.4.6/rustdesk-1.4.6-aarch64.dmg"
     else
-        # Intel
-        downloadURL="https://github.com{appNewVersion}/rustdesk-${appNewVersion}-x86_64.dmg"
+        # Intel Mac (x86_64)
+        downloadURL="https://github.com/rustdesk/rustdesk/releases/download/1.4.6/rustdesk-1.4.6-x86_64.dmg"
     fi
     
-    archiveName="rustdesk-$appNewVersion.dmg"
+    # archiveName muss eindeutig sein
+    archiveName="rustdesk-1.4.6-intel-fix.dmg"
     expectedTeamID="HZF9JMC8YN"
     ;;
-
 
 
 safeexambrowser)

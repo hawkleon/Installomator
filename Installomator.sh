@@ -349,7 +349,7 @@ if [[ $(/usr/bin/arch) == "arm64" ]]; then
     fi
 fi
 VERSION="10.9beta"
-VERSIONDATE="2026-04-08"
+VERSIONDATE="2026-04-14"
 
 # MARK: Functions
 
@@ -8016,9 +8016,9 @@ networksharemounter)
     expectedTeamID="C8F68RFW4L"
     ;;
 nextcloud)
-    name="nextcloud"
+    name="Nextcloud"
     type="pkg"
-    archiveName="Nextcloud-[0-9.]*-macOS-vfs.pkg"
+    archiveName="Nextcloud-[0-9.]+\.pkg"
     downloadURL=$(downloadURLFromGit nextcloud-releases desktop)
     appNewVersion=$(versionFromGit nextcloud-releases desktop)
     expectedTeamID="NKUJUXUJ3B"

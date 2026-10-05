@@ -10271,7 +10271,6 @@ qgisltr)
     # Es findet "QGIS.app" genauso wie "QGIS-final-3_44_15.app".
     appName=$(find "/Volumes/QGIS Installer" -maxdepth 1 -name "*.app" -exec basename {} \;)
     ;;
-    ;;
 qlab)
     name="QLab"
     type="dmg"

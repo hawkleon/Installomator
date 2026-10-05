@@ -711,6 +711,7 @@ microsoftglobalsecureaccessclient
 microsoftlicenseremovaltool
 microsoftlicensereset
 microsoftoffice365
+microsoftoffice365_push
 microsoftofficebusinesspro
 microsoftofficefactoryreset
 microsoftofficeremoval
